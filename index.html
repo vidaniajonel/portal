@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTU Portal Login</title>
+    <link rel="icon" type="image/png" href="https://www.rtu.edu.ph/wp-content/uploads/2022/08/rtulogo.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="asset/rtulogo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container">
+        <div>
+            <h1 class="university-title">RIZAL TECHNOLOGICAL UNIVERSITY<br><br>Exclusive - PORTAL</h1>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="login_option">
+            <div  class="option active" data-target="student">
+                <span>STUDENT</span>
+            </div>
+            <div class="option" data-target="applicant">
+                <span>APPLICANT</span>
+            </div>
+            <div class="option" data-target="alumni">
+                <span>ALUMNI</span>
+            </div>
+        </div>
+
+        <!-- Login Forms -->
+        <div class="form-container">
+            <!-- Student Form -->
+            <div class="login-form student-form active">
+                <h2>USER LOGIN - STUDENTS</h2>
+                <form  id="loginForm" >
+                    <input type="text" id="username" placeholder="Username..." required>
+                    <input type="password" id="password" placeholder="Password..." required>
+                    <button type="submit">Login</button>
+
+                    <div class="links">
+                        <a id="forgot-password-link" href="#">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Applicant Form -->
+            <div class="login-form applicant-form">
+                <h2>USER LOGIN - APPLICANT</h2>
+                <form>
+                    <input type="text" placeholder="Username..." required>
+                    <input type="password" placeholder="Password..." required>
+                    <button type="submit">Login</button>
+
+                    <div class="links">
+                        <a id="signup-link" href="#">New applicant? Sign up here!</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Alumni Form -->
+            <div class="login-form alumni-form">
+                <h2>USER LOGIN - ALUMNI</h2>
+                <form>
+                    <input type="text" placeholder="Username..." required>
+                    <input type="password" placeholder="Password..." required>
+                    <button type="submit">Login</button>
+                    <div class="links">
+                        <a id="alumni-application-link" href="#">Register Here!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Forgot Password</h2>
+            <p>Please enter your institutional email address below
+                and we'll send you an email with instructions on how to reset your password.</p>
+                
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="student#">Student Number:</label>
+                    <input type="student#" id="student#" placeholder="Enter your student number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Send Email</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up - Applicant</h2>
+            <form id="signupForm">
+                <div class="form-row">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="date" placeholder="Date of Birth" required>
+                    <select required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="tel" placeholder="Phone No." required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Alumni Application Modal -->
+    <div id="alumniApplicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="alumni">Alumni Online Application</h2>
+
+            <form id="alumniApplicationForm">
+                <div class="form-group">
+                    <label for="emailA">E-mail Address:<span class="ask">*</span></label>
+                    <input type="email" id="emailA" placeholder="Enter your E-mail Address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="emailB">Re-confirm E-mail Address:<span class="ask">*</span></label>
+                    <input type="email" id="emailB" placeholder="Re-Confirm your email" required>
+                </div>
+                <button type="submit">Send E-mail</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Get input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            // Regular expression for username: starts with '2022-' followed by any number of digits
+            const usernamePattern = /^2022-\d+$/;
+        
+            // Check if the username matches the pattern and allow any password
+            if (usernamePattern.test(username)) {
+                // Show the loading logo
+                showLoadingLogo();
+        
+                // Delay the redirection to the main menu
+                setTimeout(function() {
+                    // Redirect to the local file (this will only work on a local environment)
+                    window.location.href = 'file:///C:/Users/NELPC/Documents/Downloads/home.html';
+                }, 3000); // 3-second delay before redirect
+            } else {
+                alert('Invalid Username. Please enter a valid student number.');
+            }
+        });
+
+        function showLoadingLogo() {
+    // Create a loading screen or logo element
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loadingScreen';
+    loadingScreen.style.position = 'fixed';
+    loadingScreen.style.top = '0';
+    loadingScreen.style.left = '0';
+    loadingScreen.style.width = '100%';
+    loadingScreen.style.height = '100%';
+    loadingScreen.style.backgroundColor = '#d6d6d6';
+    loadingScreen.style.zIndex = '9999';
+    loadingScreen.style.display = 'flex';
+    loadingScreen.style.flexDirection = 'column'; // Added to stack elements vertically
+    loadingScreen.style.justifyContent = 'center';
+    loadingScreen.style.alignItems = 'center';
+    loadingScreen.style.textAlign = 'center'; // Center text
+
+    // Add logo image
+    const logo = document.createElement('img');
+    logo.src = 'asset/rtuload.gif'; // Path to your logo
+    logo.alt = 'Loading...';
+    logo.style.width = '450px'; // Adjust logo size
+    logo.style.height = 'auto';
+
+    // Create a container for text
+    const textContainer = document.createElement('div');
+    textContainer.style.marginTop = '30px'; // Space between logo and text
+
+    // Add text to the container
+    const mainTitle = document.createElement('h1');
+    mainTitle.textContent = 'Rizal Technological University';
+    mainTitle.style.margin = '0';
+    mainTitle.style.fontSize = '40px';
+    
+    const subtitle = document.createElement('h2');
+    subtitle.textContent = 'Portal';
+    subtitle.style.margin = '0';
+    subtitle.style.marginTop = '5px';
+    subtitle.style.fontSize = '30px';
+
+    // Append text to the container
+    textContainer.appendChild(mainTitle);
+    textContainer.appendChild(subtitle);
+
+    // Append logo and text container to the loading screen
+    loadingScreen.appendChild(logo);
+    loadingScreen.appendChild(textContainer);
+
+    // Append the loading screen to the body
+    document.body.appendChild(loadingScreen);
+}
+    </script>
+</body>
+</html>

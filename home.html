@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Home</title>
+    <link rel="icon" type="image/png" href="https://www.rtu.edu.ph/wp-content/uploads/2022/08/rtulogo.png" />
+    <link rel="stylesheet" href="style2.css"> <!-- Adjust the path if the file is in a different folder -->
+</head>
+<body>
+    <header>
+        <h2>Rizal Technological University</h2>
+        <p>Cities of Pasig and Mandaluyong</p>
+        <p>College of Engineering and Architecture</p>
+        <p>Bachelor of Science in Electronics Engineering</p>
+    </header>
+
+    <div class="nav">
+        <a class="act" href="Index.html">Home</a>
+        <a href="todo.html">To Do List</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="grades.html">Grades</a>
+        <a class="right" id="logout-btn" href="#">Logout</a>
+    </div>
+
+    <div class="container">
+        <img src="https://tinyurl.com/47p46fu6" alt="Logo" class="logo">
+        <img src="https://i.pinimg.com/originals/1e/ba/42/1eba424ad490e0d71cfaa92c0a7277a0.jpg" alt="Logo" class="logo">
+        <h1 class="title">Welcome to the Home Page</h1>
+        <p>We are glad to have you here. This portal is exclusive for <B>ITIKS - BSECE - 29 - 601P</B> only. </p>
+        <a class="push" href="#">Learn More</a>
+    </div>
+
+    <footer>
+        &copy; 2024 BS Electronics Engineering Portal
+    </footer>
+</body>
+</html>
+
+<script>
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        // Clear user data from LocalStorage (if applicable)
+        localStorage.removeItem('username'); // Replace with your key
+        localStorage.removeItem('password'); // Replace with your key
+
+        // Optionally clear other session or user data
+        // Redirect to login page or home page
+        window.location.href = 'file:///C:/Users/NELPC/Documents/Downloads/login/index.html'; // Redirect to the login page
+    });
+</script>
+

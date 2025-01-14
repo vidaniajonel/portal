@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Announcements</title>
+    <link rel="icon" type="image/png" href="https://www.rtu.edu.ph/wp-content/uploads/2022/08/rtulogo.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }        
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            line-height: 0.3; /* Adjusted for standard single-line paragraph spacing */
+            font-size: 1em; /* Scalable font size */
+        }
+        
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 15px; /* Reduced padding for smaller screens */
+                font-size: 0.9em; /* Adjusted font size for readability */
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 10px; /* Further reduced padding */
+                font-size: 0.85em; /* Smaller font for compact devices */
+            }
+        }
+        
+        .nav {
+            background-color: #003366;
+            overflow: hidden;
+        }
+        .nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .nav a:hover {
+            background-color: #0055aa;
+        }
+        
+        .container {
+            width: 100% auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 20px auto; /* Centers the container horizontally */
+            position: relative;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center; /* Centers the image horizontally */
+            align-items: center;    /* Centers the image vertically */
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            max-width: 100%;    /* Prevents the image from overflowing the card */
+            max-height: 100%;   /* Keeps the image responsive */
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 8px;
+        }
+        .card-content {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .act5 {
+            background-color: #0055aa;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Rizal Technological University</h2>
+        <p>Cities of Pasig and Mandaluyong</p>
+        <p>College of Engineering and Architecture</p>
+        <p>Bachelor of Science in Electronics Engineering</p>
+    </header>
+
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a class="act5" href="sample.html">To Do List</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="grades.html">Grades</a>
+        <a class="right" id="logout-btn" href="#">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+        <h3 style="color: red;">Note: This is a Sample Task, Uploading Task Soon ...</h3>
+        <div class="card-grid">
+            <div class="card">
+                <img src="task.jpg" alt="Task" style="width: auto; height: auto; border-radius: 8px; ">
+            </div>
+        </div>        
+    </div>
+
+    <footer>
+        &copy; 2024 BS Electronics Engineering Portal
+    </footer>
+</body>
+</html>
+
+<script>
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        // Clear user data from LocalStorage (if applicable)
+        localStorage.removeItem('username'); // Replace with your key
+        localStorage.removeItem('password'); // Replace with your key
+
+        // Optionally clear other session or user data
+        // Redirect to login page or home page
+        window.location.href = 'file:///C:/Users/NELPC/Documents/Downloads/login/index.html'; // Redirect to the login page
+    });
+</script>

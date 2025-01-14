@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Electronics Engineering - Class Schedule</title>
+    <link rel="icon" type="image/png" href="https://www.rtu.edu.ph/wp-content/uploads/2022/08/rtulogo.png" />
+    <link rel="stylesheet" href="style3.css"> <!-- Adjust the path if the file is in a different folder -->
+</head>
+<body>
+
+    <header>
+        <h2>Rizal Technological University</h2>
+        <p>Cities of Pasig and Mandaluyong</p>
+        <p>College of Engineering and Architecture</p>
+        <p>Bachelor of Science in Electronics Engineering</p>
+    </header>
+
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="todo.html">To Do List</a>
+        <a class="act2" href="schedule.html">Schedule</a>
+        <a href="grades.html">Grades</a>
+        <a class="right" id="logout-btn" href="#">Logout</a>
+    </div>
+
+    <div class="tilt">
+        <h1>BS Electronics Engineering - Class Schedule</h1>
+        <h3>Second Semester, Third Year (2024 - 2025)</h3>
+    </div>
+
+    <div class="schedule">
+        <div class="day-column">
+            <div class="day-header">Sunday</div>
+            <div class="class-box">Vacant/No Class</div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Monday</div>
+            <div class="class-box">
+                <strong>COM 04 LEC</strong><br><br>
+                Comms 4: Data Communications<br>
+                Room: ITC-415<br><br>
+                12:00 PM - 1:30 PM
+            </div>
+            <div class="class-box">
+                <strong>ECE 04</strong><br><br>
+                Methods of Research<br>
+                Room: ITC-415<br><br>
+                1:30 PM - 4:30 PM
+            </div>
+            <div class="class-box">
+                <strong>ECE 05</strong><br><br>
+                Design 1 / Capstone Project 1<br>
+                Room: ITC-415<br><br>
+                4:30 PM - 7:30 PM
+            </div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Tuesday</div>
+
+            <div class="class-box">Vacant/No Class</div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Wednesday</div>
+            <div class="class-box">
+                <strong>COMSYS LAB</strong><br><br>
+                Feedback and Control System Laboratory<br>
+                Room: ITC-305<br><br>
+                10:30 AM - 1:30 PM
+            </div>
+            <div class="class-box">Vacant/Preparation<br><br>1:30 PM - 2:50 PM</div>
+            <div class="class-box">
+                <strong>COM 04 LAB</strong><br><br>
+                Comms 4: Data Communications Laboratory<br>
+                Room: ITC-417<br><br>
+                3:00 PM - 6:00 PM
+            </div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Thursday</div>
+            <div class="class-box">
+                <strong>COM 04 LEC</strong><br><br>
+                Comms 4: Data Communications<br>
+                Room: ITC-415<br><br>
+                12:00 PM - 1:30 PM
+            </div>
+            <div class="class-box">Vacant/Preparation<br>7:00 AM - 9:30 AM</div>
+            <div class="class-box">
+                <strong>DEL 02 LEC</strong><br><br>
+                Digital Electronics 2: Controller Sys. and Design<br>
+                Room: ITC-307<br><br>
+                3:00 PM - 6:00 PM
+            </div>
+            <div class="class-box">
+                <strong>DEL 02 LAB</strong><br><br>
+                Dig. Elecs 2: Controller Sys. and Desgn. Laboratory<br>
+                Room: ITC-307<br><br>
+                6:00 PM - 9:00 PM
+            </div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Friday</div>
+            <div class="class-box">Vacant/Preparation<br>7:00 AM - 9:30 AM</div>
+            <div class="class-box">
+                <strong>COM 03 LAB</strong><br><br>
+                Comms 3: Trans Media & Ant. Syst and Design<br>
+                Room: ITC-309A<br><br>
+                10:30 AM - 1:30 PM
+            </div>
+            <div class="class-box">Vacant/Preparation<br>1:30 PM - 4:20 PM</div>
+            <div class="class-box">
+                <strong>CONSYS LEC</strong><br><br>
+                Feedback and Control System<br>
+                Room: ITC-405<br><br>
+                4:30 PM - 7:30 PM
+            </div>
+        </div>
+        <div class="day-column">
+            <div class="day-header">Saturday</div>
+            <div class="class-box">Vacant/Preparation<br>7:00 AM - 9:30 AM</div>
+            <div class="class-box">
+                <strong>ECOM 03 LEC</strong><br><br>
+                Technical Elective 1<br>
+                Room: ITC-415<br><br>
+                7:30 AM - 10:30 AM
+            </div>
+            <div class="class-box">
+                <strong>ECE 07</strong><br><br>
+                Technical Elective 1<br>
+                Room: ITC-415<br><br>
+                10:30 AM - 1:30 PM
+            </div>
+            <div class="class-box">
+                <strong>ECE 07 LAB</strong><br><br>
+                Technical Elective 1<br>
+                Room: ITC-415<br><br>
+                1:30 PM - 4:30 PM
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 BS Electronics Engineering Portal
+    </footer>
+</body>
+</html>
+
+<script>
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        // Clear user data from LocalStorage (if applicable)
+        localStorage.removeItem('username'); // Replace with your key
+        localStorage.removeItem('password'); // Replace with your key
+
+        // Optionally clear other session or user data
+        // Redirect to login page or home page
+        window.location.href = 'file:///C:/Users/NELPC/Documents/Downloads/login/index.html'; // Redirect to the login page
+    });
+</script>
+

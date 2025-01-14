@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Details</title>
+    <link rel="icon" type="image/png" href="https://www.rtu.edu.ph/wp-content/uploads/2022/08/rtulogo.png" />
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <header>
+        <h2>Rizal Technological University</h2>
+        <p>Cities of Pasig and Mandaluyong</p>
+        <p>College of Engineering and Architecture</p>
+        <p>Bachelor of Science in Electronics Engineering</p>
+    </header>
+
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="todo.html">To Do List</a>
+        <a href="schedule.html">Schedule</a>
+        <a class="act4" href="grades.html">Grades</a>
+        <a class="right" id="logout-btn" href="#">Logout</a>
+    </div>
+
+    <div class="container">
+        <div class="enrollment-details">
+            <h3>Enrolled Subjects</h3>
+
+            <hr>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Subject Code</th>
+                        <th>Grade</th>
+                        <th>Units</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>COM03</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Comms 3: Trans Media & Ant. Syst and Design</td>
+                    </tr>
+                    <tr>
+                        <td>COM03LAB</td>
+                        <td>NG</td>
+                        <td>1.00</td>
+                        <td>Comms 3: Trans Media & Ant. Syst and Design Laboratory</td>
+                    </tr>
+                    <tr>
+                        <td>COM04</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Comms 4: Data Communications</td>
+                    </tr>
+                    <tr>
+                        <td>COM04LAB</td>
+                        <td>NG</td>
+                        <td>1.00</td>
+                        <td>Comms 4: Data Communications Laboratory</td>
+                    </tr>
+                    <tr>
+                        <td>CONSYS</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Feedback and Control System</td>
+                    </tr>
+                    <tr>
+                        <td>CONSYSLAB</td>
+                        <td>NG</td>
+                        <td>1.00</td>
+                        <td>Feedback and Control System Laboratory</td>
+                    </tr>
+                    <tr>
+                        <td>DEL02</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Dig. Elecs 2: Controller Sys. and Design</td>
+                    </tr>
+                    <tr>
+                        <td>DEL02LAB</td>
+                        <td>NG</td>
+                        <td>1.00</td>
+                        <td>Dig. Elecs 2: Controller Sys. and Design Laboratory</td>
+                    </tr>
+                    <tr>
+                        <td>ECE04</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Methods of Research</td>
+                    </tr>
+                    <tr>
+                        <td>ECE05</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Design 1/Capstone Project 1</td>
+                    </tr>
+                    <tr>
+                        <td>ECE07</td>
+                        <td>NG</td>
+                        <td>3.00</td>
+                        <td>Technical Elective 1</td>
+                    </tr>
+                    <tr>
+                        <td>ECE07LAB</td>
+                        <td>NG</td>
+                        <td>1.00</td>
+                        <td>Technical Elective 1 Laboratory</td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>
+        <p class="legends">	Legend: NF - Not Finalize</p>
+    </div>
+
+    <footer>
+        &copy; 2024 BS Electronics Engineering Portal
+    </footer>
+</body>
+</html>
+
+<script>
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        // Clear user data from LocalStorage (if applicable)
+        localStorage.removeItem('username'); // Replace with your key
+        localStorage.removeItem('password'); // Replace with your key
+
+        // Optionally clear other session or user data
+        // Redirect to login page or home page
+        window.location.href = 'file:///C:/Users/NELPC/Documents/Downloads/login/index.html'; // Redirect to the login page
+    });
+</script>
+
